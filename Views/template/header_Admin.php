@@ -104,7 +104,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
-                                <a class="dropdown-item" href="javascript:;"><i class="bx bx-user-circle"></i><span>Perfil</span>
+                                <a class="dropdown-item" href="<?php echo BASE_URL . 'perfil'; ?>"><i class="bx bx-user-circle"></i><span>Perfil</span>
                                 </a>
                             </li>
                             <li>
