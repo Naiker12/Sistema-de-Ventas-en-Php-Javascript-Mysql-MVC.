@@ -21,7 +21,6 @@ class HomeModel extends Query{
         $sql = "SELECT $accion(cantidad) AS total FROM calificaciones WHERE id_producto = $id";
         return $this->select($sql);
     }
-
 }
  
 ?>

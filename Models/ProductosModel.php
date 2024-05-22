@@ -5,7 +5,6 @@ class ProductosModel extends Query{
     {
         parent::__construct();
     }
-
     public function getProductos($estado)
     {
         $sql = "SELECT * FROM productos WHERE estado = $estado";
@@ -17,7 +16,6 @@ class ProductosModel extends Query{
         return $this->selectAll($sql);
     }
 
-    //REGISTRAR EL PRODUCTO
     public function registrar($nombre, $descripcion, $precio, $cantidad, $imagen, $categoria)
     {
         $sql = "INSERT INTO productos (nombre, descripcion, precio, cantidad, imagen, id_categoria) VALUES (?,?,?,?,?,?)";
@@ -25,7 +23,6 @@ class ProductosModel extends Query{
         return $this->insertar($sql, $array);
     }
 
-    //ELIMINAR EL PRODUCTOS
     public function eliminar($idPro)
     {
         $sql = "UPDATE productos SET estado = ? WHERE id = ?";
@@ -33,14 +30,12 @@ class ProductosModel extends Query{
         return $this->save($sql, $array);
     }
 
-
     public function getProducto($idPro)
     {
         $sql = "SELECT * FROM productos WHERE id = $idPro";
         return $this->select($sql);
     }
 
-    //MODIFICAR EL PRODUCTOS
     public function modificar($nombre, $descripcion, $precio, $cantidad, $destino, $categoria, $id)
     {
         $sql = "UPDATE productos SET nombre=?, descripcion=?, precio=?, cantidad=?, imagen=?, id_categoria=? WHERE id = ?";

@@ -6,10 +6,6 @@ class Usuarios extends Controller
         session_start();
         
     }
-   /*====================================================
-   AQUI LO QUE ESTAMOS HACIENDO ES ENVIAR O PASAR EL TITULO
-   A LA PAGINA PRINCIPAL MEDIANTE LA PAGINA DE VISTA
-   ======================================================= */
     public function index()
     {
         $data['title'] = 'usuarios';

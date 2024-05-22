@@ -6,27 +6,26 @@ class Principal extends Controller
         session_start();
         
     }
-   /*======================================================
+    /*======================================================
    AQUI LO QUE ESTAMOS HACIENDO ES ENVIAR O PASAR EL TITULO
    A LA PAGINA DEL SERVICIO
    ======================================================= */
 
-    public function abaut()
-    {
-        $data['perfil'] = 'no';
-        $data['title'] = 'Nuestro Equipo';
-        $this->views->getView('principal', "about", $data);
-    }
+   public function about()
+   {
+       $data['perfil'] = 'no';
+       $data['title'] = 'Nuestro Equipo';
+       $this->views->getView('principal', "about", $data);
+   }
 
-   /*====================================================
+     /*====================================================
    AQUI LO QUE ESTAMOS HACIENDO ES ENVIAR O PASAR EL TITULO
    A LA PAGINA DE LOS PRODUCTOS
    ======================================================= */
-
     public function shop($page)
     {
         $data['perfil'] = 'no';
-        $pagina = (empty($page)) ? 1 : $page;
+        $pagina = (empty($page)) ? 1 : $page ;
         $porPagina = 20;
         $desde = ($pagina - 1) * $porPagina;
         $data['title'] = 'Nuestro Productos';
@@ -36,12 +35,11 @@ class Principal extends Controller
         $data['total'] = ceil($total['total'] / $porPagina);
         $this->views->getView('principal', "shop", $data);
     }
-
-     /*====================================================
+    
+  /*====================================================
    AQUI LO QUE ESTAMOS HACIENDO ES ENVIAR O PASAR EL TITULO
    A LA PAGINA DE LOS NUEVOS PRODUCTOS
    ======================================================= */
-
     public function detail($id_producto)
     {
         $data['perfil'] = 'no';
@@ -55,7 +53,7 @@ class Principal extends Controller
 
         //scanear galeria
         $result = array();
-        $directorio = 'assets/img/productos/' . $id_producto;
+        $directorio = 'assets/images/productos/' . $id_producto;
         if (file_exists($directorio)) {
             $imagenes = scandir($directorio);
             if (false !== $imagenes) {
@@ -71,11 +69,11 @@ class Principal extends Controller
         $data['title'] = $data['producto']['nombre'];
         $this->views->getView('principal', "detail", $data);
     }
+    
 
-    /*====================================================
-  VISTA CATEGORIAS
+     /*====================================================
+                      VISTA CATEGORIAS
    ======================================================= */
-
     public function categorias($datos)
     {
         $data['perfil'] = 'no';
@@ -83,21 +81,19 @@ class Principal extends Controller
         $page = 1;
         $array = explode(',', $datos);
         if (isset($array[0])) {
-           if (!empty($array[0])) {
-              $id_categoria = $array[0];
-           }
+            if (!empty($array[0])) {
+                $id_categoria = $array[0];
+            }
         }
         if (isset($array[1])) {
             if (!empty($array[1])) {
-               $page = $array[1];
+                $page = $array[1];
             }
-         }
-
-        $pagina = (empty($page)) ? 1 : $page;
+        }
+        $pagina = (empty($page)) ? 1 : $page ;
         $porPagina = 16;
         $desde = ($pagina - 1) * $porPagina;
 
-         
         $data['pagina'] = $pagina;
         $total = $this->model->getTotalProductosCat($id_categoria);
         $data['total'] = ceil($total['total'] / $porPagina);
@@ -108,7 +104,7 @@ class Principal extends Controller
         $this->views->getView('principal', "categorias", $data);
     }
 
-    /*====================================================
+     /*====================================================
    AQUI LO QUE ESTAMOS HACIENDO ES ENVIAR O PASAR EL TITULO
    A LA PAGINA DE LOS CONTACTO
    ======================================================= */
@@ -118,44 +114,46 @@ class Principal extends Controller
         $data['title'] = 'Contactos';
         $this->views->getView('principal', "contact", $data);
     }
-   /*====================================================
+
+      /*====================================================
                  VISTA LISTA DE DESEO 
    ======================================================= */
     public function deseo()
     {
         $data['perfil'] = 'no';
-        $data['title'] = 'Tu lista de deseos';
+        $data['title'] = 'Tu lista de deseo';
         $this->views->getView('principal', "deseo", $data);
     }
-    /*====================================================
+
+     /*====================================================
         OBTENER PRODUCTO  PARTIR DEl CARRITO COMPRAS
    ======================================================= */
-   public function listaProductos()
-   {
-       $datos = file_get_contents('php://input');
-       $json = json_decode($datos, true);
-       $array['productos'] = array();
-       $total = 0.00;
-       if (!empty($json)) {
-           foreach ($json as $producto) {
-               $result = $this->model->getProducto($producto['idProducto']);
-               $data['id'] = $result['id'];
-               $data['nombre'] = $result['nombre'];
-               $data['precio'] = $result['precio'];
-               $data['cantidad'] = $producto['cantidad'];
-               $data['imagen'] = $result['imagen'];
-               $subTotal = $result['precio'] * $producto['cantidad'];
-               $data['subTotal'] = number_format($subTotal, 2);
-               array_push($array['productos'], $data);
-               $total += $subTotal;
-           }
-       }        
-       $array['total'] = number_format($total, 2);
-       $array['totalPaypal'] = number_format($total, 2, '.', '');
-       $array['moneda'] = MONEDA;
-       echo json_encode($array, JSON_UNESCAPED_UNICODE);
-       die();
-   }
+    public function listaProductos()
+    {
+        $datos = file_get_contents('php://input');
+        $json = json_decode($datos, true);
+        $array['productos'] = array();
+        $total = 0.00;
+        if (!empty($json)) {
+            foreach ($json as $producto) {
+                $result = $this->model->getProducto($producto['idProducto']);
+                $data['id'] = $result['id'];
+                $data['nombre'] = $result['nombre'];
+                $data['precio'] = $result['precio'];
+                $data['cantidad'] = $producto['cantidad'];
+                $data['imagen'] = $result['imagen'];
+                $subTotal = $result['precio'] * $producto['cantidad'];
+                $data['subTotal'] = number_format($subTotal, 2);
+                array_push($array['productos'], $data);
+                $total += $subTotal;
+            }
+        }        
+        $array['total'] = number_format($total, 2);
+        $array['totalPaypal'] = number_format($total, 2, '.', '');
+        $array['moneda'] = MONEDA;
+        echo json_encode($array, JSON_UNESCAPED_UNICODE);
+        die();
+    }
 
     public function busqueda($valor)
     {

@@ -1,6 +1,7 @@
 const tableLista = document.querySelector("#tableListaProductos tbody");
 const tblPendientes = document.querySelector('#tblPendientes');
 let productosjson = [];
+let tblCalificacion;
 const estadoEnviado = document.querySelector('#estadoEnviado');
 const estadoProceso = document.querySelector('#estadoProceso');
 const estadoCompletado = document.querySelector('#estadoCompletado');
@@ -19,6 +20,25 @@ document.addEventListener("DOMContentLoaded", function() {
             { data: 'monto' },
             { data: 'fecha' },
             { data: 'accion' }
+        ],
+        language,
+        dom,
+        buttons
+
+    });
+
+    //CARGAR DATOS EN LA TABLA DE CALIFICACION
+    tblCalificacion = $('#tblProductos').DataTable({
+        ajax: {
+            url: base_url + 'clientes/listarProductos',
+            dataSrc: ''
+        },
+        columns: [
+            { data: 'id_producto' },
+            { data: 'producto' },
+            { data: 'precio' },
+            { data: 'cantidad' },
+            { data: 'calificacion' }
         ],
         language,
         dom,
@@ -164,7 +184,7 @@ function verPedido(idPedido) {
 
 }
 
-/*function agregarCalificacion(id_producto, cantidad) {
+function agregarCalificacion(id_producto, cantidad) {
     const url = base_url + 'clientes/agregarCalificacion';
     const http = new XMLHttpRequest();
     http.open('POST', url, true);
@@ -182,4 +202,4 @@ function verPedido(idPedido) {
             }
         }
     }
-}*/
+}

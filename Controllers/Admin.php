@@ -1,21 +1,20 @@
 <?php
 class Admin extends Controller
 {
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         session_start();
-        
     }
-   /*====================================================
-   AQUI LO QUE ESTAMOS HACIENDO ES ENVIAR O PASAR EL TITULO
-   A LA PAGINA  DE ADMINITRACION A LOGIN
-   ======================================================= */
     public function index()
     {
+        if (!empty($_SESSION['nombre_usuario'])) {
+            header('Location: '. BASE_URL . 'admin/home');
+            exit;
+        }
         $data['title'] = 'Acceso al sistema';
         $this->views->getView('admin', "login", $data);
     }
-
     public function validar()
     {
         if (isset($_POST['email']) && isset($_POST['clave'])) {
@@ -44,7 +43,6 @@ class Admin extends Controller
 
     public function home()
     {
-       
         if (empty($_SESSION['nombre_usuario'])) {
             header('Location: '. BASE_URL . 'admin');
             exit;
@@ -56,7 +54,6 @@ class Admin extends Controller
         $data['productos'] = $this->model->getProductos();
         $this->views->getView('admin/administracion', "index", $data);
     }
-
 
     public function productosMinimos()
     {

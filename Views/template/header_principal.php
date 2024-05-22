@@ -16,7 +16,7 @@
     <!-- Aqui estan los estilos de la pagina  -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="<?php echo BASE_URL ;?>assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL ;?>assets/css/fontawesome.css">
 
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets/css/slick.min.css">
@@ -30,6 +30,8 @@
 
      <!-- LIBRERIA DE ALERTAS  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 
     <!----------------------------------------------------
@@ -63,7 +65,7 @@
                             <a class="nav-link" href="<?php echo BASE_URL; ?>">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo BASE_URL .  'principal/abaut' ?>">Servicios</a>
+                            <a class="nav-link" href="<?php echo BASE_URL .  'principal/about' ?>">Servicios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo BASE_URL .  'principal/shop' ?>">Producto</a>

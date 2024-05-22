@@ -146,14 +146,14 @@ body, ul, li, p, a, label, input, div {
     line-height: 2.6em;
   }
   #tempaltemo_footer ul.footer-icons li:hover {
-    background-color: #cfd6e1;
+    background-color: #69bb7e;
     transition: .5s;
   }
   #tempaltemo_footer ul.footer-icons li:hover i {
     color: #212934;
     transition: .5s;
   }
-  #tempaltemo_footer .border-light { border-color: #2d343f !important;}
+  #tempaltemo_footer .border-light { border-color: #0bff7e !important;}
   /*
   // Extra small devices (portrait phones, less than 576px)
   // No media query since this is the default in Bootstrap

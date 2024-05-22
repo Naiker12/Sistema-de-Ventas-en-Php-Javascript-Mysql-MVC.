@@ -12,7 +12,7 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
  
         <main class="px-3">
-            <h1>tienda virtual</h1>
+            <h1>Not Found.</h1>
             <p class="lead">La página que buscas no existe</p>
             <p class="lead">
                 <a href="<?php echo BASE_URL; ?>" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark"><?php echo TITLE; ?></a>

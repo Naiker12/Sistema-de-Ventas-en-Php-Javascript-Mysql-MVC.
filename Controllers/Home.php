@@ -4,23 +4,23 @@ class Home extends Controller
     public function __construct() {
         parent::__construct();
         session_start();
-        
     }
-
-
-   /*====================================================
-   AQUI LO QUE ESTAMOS HACIENDO ES ENVIAR O PASAR EL TITULO
-   A LA PAGINA PRINCIPAL MEDIANTE LA PAGINA DE VISTA
-   ======================================================= */
     public function index()
     {
         $data['perfil'] = 'no';
-        $data['title'] = 'Tienda de celulares NDB';
+        $data['title'] = 'Pagina Principal';
         $data['categorias'] = $this->model->getCategorias();
-        $data['nuevoProductos'] = $this->model->getNuevosProductos();
+        $productos = $this->model->getNuevosProductos();
+        for ($i=0; $i < count($productos); $i++) {
+            $calificacion = $this->model->getCalificacion('SUM', $productos[$i]['id']);
+            $cantidad = $this->model->getCalificacion('COUNT', $productos[$i]['id']);
+            $totalCantidad = ($cantidad['total'] == 0) ? 5 : $cantidad['total'] ;
+
+            $total = ($calificacion['total'] != null) ? $calificacion['total'] / $totalCantidad : $totalCantidad;
+
+            $productos[$i]['calificacion'] = round($total);
+        }
+        $data['nuevoProductos'] = $productos;
         $this->views->getView('home', "index", $data);
     }
-
 }
-
-

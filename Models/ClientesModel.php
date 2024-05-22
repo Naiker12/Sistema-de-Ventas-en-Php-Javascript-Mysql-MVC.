@@ -1,12 +1,10 @@
 <?php
-class ClientesModel extends Query
-{
-
+class ClientesModel extends Query{
+ 
     public function __construct()
     {
         parent::__construct();
     }
-
     public function registroDirecto($nombre, $correo, $clave, $token)
     {
         $sql = "INSERT INTO clientes (nombre, correo, clave, token) VALUES (?,?,?,?)";
@@ -127,7 +125,6 @@ class ClientesModel extends Query
         }
         return $res;
     }
-
 }
-
+ 
 ?>

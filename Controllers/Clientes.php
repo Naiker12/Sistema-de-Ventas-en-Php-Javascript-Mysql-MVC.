@@ -6,19 +6,13 @@ use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
 
-class clientes extends Controller
+class Clientes extends Controller
 {
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         session_start();
-      
-        
-        
     }
-   /*====================================================
-   AQUI LO QUE ESTAMOS HACIENDO ES ENVIAR O PASAR EL TITULO
-   A LA PAGINA PRINCIPAL MEDIANTE LA PAGINA DE VISTA
-   ======================================================= */
     public function index()
     {
         if (empty($_SESSION['correoCliente'])) {
@@ -29,41 +23,35 @@ class clientes extends Controller
         $data['verificar'] = $this->model->getVerificar($_SESSION['correoCliente']);
         $this->views->getView('principal', "perfil", $data);
     }
-
     public function registroDirecto()
     {
         if (isset($_POST['nombre']) && isset($_POST['clave'])) {
             if (empty($_POST['nombre']) || empty($_POST['correo']) || empty($_POST['clave'])) {
-                $mensaje = array('msg' => 'TODO LOS CAMPOS SON REQUERIDOS' , 'icono' => 'warning');
-            }else{
+                $mensaje = array('msg' => 'TODO LOS CAMPOS SON REQUERIDOS', 'icono' => 'warning');
+            } else {
                 $nombre = $_POST['nombre'];
                 $correo = $_POST['correo'];
                 $clave = $_POST['clave'];
-                $data['verificar'] = $this->model->getVerificar($correo);
+                $verificar = $this->model->getVerificar($correo);
                 if (empty($verificar)) {
                     $token = md5($correo);
                     $hash = password_hash($clave, PASSWORD_DEFAULT);
                     $data = $this->model->registroDirecto($nombre, $correo, $hash, $token);
-                if ($data > 0) {
-                    $_SESSION['correoCliente'] = $correo;
-                    $_SESSION['nombreCliente'] = $nombre;
-                    $mensaje = array('msg' => 'registrado con exito' , 'icono' => 'success', 'token' => $token);
-    
-                }else {
-                    $mensaje = array('msg' => 'error al registrarse' , 'icono' => 'error');
-             
+                    if ($data > 0) {
+                        $_SESSION['correoCliente'] = $correo;
+                        $_SESSION['nombreCliente'] = $nombre;
+                        $mensaje = array('msg' => 'registrado con éxito', 'icono' => 'success', 'token' => $token);
+                    } else {
+                        $mensaje = array('msg' => 'error al registrarse', 'icono' => 'error');
+                    }
+                } else {
+                    $mensaje = array('msg' => 'YA TIENES UNA CUENTA', 'icono' => 'warning');
                 }
-                }else{
-                    $mensaje = array('msg' => 'YA TIENES UNA CUENTA' , 'icono' => 'warning');
-                }
-            
             }
             echo json_encode($mensaje, JSON_UNESCAPED_UNICODE);
             die();
         }
-
     }
-
     public function enviarCorreo()
     {
         if (isset($_POST['correo']) && isset($_POST['token'])) {
@@ -99,8 +87,7 @@ class clientes extends Controller
         }
         echo json_encode($mensaje, JSON_UNESCAPED_UNICODE);
         die();
-
-    }   
+    }
     public function verificarCorreo($token)
     {
         $verificar = $this->model->getToken($token);
@@ -110,7 +97,7 @@ class clientes extends Controller
         }
     }
 
-    //LOGIN DIRECTO
+    //login directo
     public function loginDirecto()
     {
         if (isset($_POST['correoLogin']) && isset($_POST['claveLogin'])) {
@@ -125,7 +112,7 @@ class clientes extends Controller
                         $_SESSION['idCliente'] = $verificar['id'];
                         $_SESSION['correoCliente'] = $verificar['correo'];
                         $_SESSION['nombreCliente'] = $verificar['nombre'];
-                        $mensaje = array('msg' => 'OK', 'icono' => 'success');
+                        $mensaje = array('msg' => 'BIENVENIDO A TECHNOLOGY STORE', 'icono' => 'success');
                     } else {
                         $mensaje = array('msg' => 'CONTRASEÑA INCORRECTA', 'icono' => 'error');
                     }
@@ -137,8 +124,7 @@ class clientes extends Controller
             die();
         }
     }
-
-    //RESGISTRAR PEDIDOS
+    //registrar pedidos
     public function registrarPedido()
     {
         $datos = file_get_contents('php://input');
@@ -183,8 +169,7 @@ class clientes extends Controller
         echo json_encode($mensaje);
         die();
     }
-
-    //LISTA PRODUCTO PENDIENTES
+    //listar productos pendientes
     public function listarPendientes()
     {
         $id_cliente = $_SESSION['idCliente'];
@@ -195,7 +180,6 @@ class clientes extends Controller
         echo json_encode($data);
         die();
     }
-
     public function verPedido($idPedido)
     {
         $data['pedido'] = $this->model->getPedido($idPedido);
@@ -205,7 +189,7 @@ class clientes extends Controller
         die();
     }
 
-    //LISTAR LOS PRODUCTO PEDIENTES
+    //listar productos pendientes
     public function listarProductos()
     {
         $id_cliente = $_SESSION['idCliente'];
@@ -265,5 +249,3 @@ class clientes extends Controller
         header('Location: ' . BASE_URL);
     }
 }
-
-

@@ -5,11 +5,12 @@
     <div class="container">
         <div class="row align-items-center py-5">
             <div class="col-md-8 text-white">
-                <h1>About Us</h1>
+                <h1 class="text-center">¡Descubre nuestros servicios en Technology Store!</h1>
+                <hr>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    En Technology Store no solo te ofrecemos una amplia gama de equipos tecnológicos de las mejores
+                    marcas, sino que también ponemos a tu disposición una completa oferta de servicios para ayudarte a
+                    sacar el máximo partido a tu tecnología.
                 </p>
             </div>
             <div class="col-md-4">
@@ -25,9 +26,11 @@
     <div class="row text-center pt-5 pb-3">
         <div class="col-lg-6 m-auto">
             <h1 class="h1">Servicio al cliente</h1>
+            <hr>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                Lorem ipsum dolor sit amet.
+                En Technology Store creemos que la atención al cliente es fundamental para el éxito de cualquier
+                negocio. Por eso, nos esforzamos por ofrecer a nuestros clientes la mejor experiencia posible en cada
+                interacción.
             </p>
         </div>
     </div>
@@ -35,28 +38,28 @@
         <div class="col-md-6 col-lg-3 pb-5">
             <div class="h-100 py-5 services-icon-wap shadow">
                 <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
-                <h2 class="h5 mt-4 text-center">Delivery Services</h2>
+                <h2 class="h5 mt-4 text-center">Servicios de entrega</h2>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-3 pb-5">
             <div class="h-100 py-5 services-icon-wap shadow">
                 <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
-                <h2 class="h5 mt-4 text-center">Shipping & Return</h2>
+                <h2 class="h5 mt-4 text-center">Envíos y devoluciones</h2>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-3 pb-5">
             <div class="h-100 py-5 services-icon-wap shadow">
                 <div class="h1 text-success text-center"><i class="fa fa-percent"></i></div>
-                <h2 class="h5 mt-4 text-center">Promotion</h2>
+                <h2 class="h5 mt-4 text-center">Promociones</h2>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-3 pb-5">
             <div class="h-100 py-5 services-icon-wap shadow">
                 <div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
-                <h2 class="h5 mt-4 text-center">24 Hours Service</h2>
+                <h2 class="h5 mt-4 text-center">Servicio 24 horas</h2>
             </div>
         </div>
     </div>
@@ -68,10 +71,9 @@
     <div class="container my-4">
         <div class="row text-center py-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">Our Brands</h1>
+                <h1 class="h1">Nuestras Marcas</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    Lorem ipsum dolor sit amet.
+                  En Technology Store nos enorgullece ofrecerte una amplia gama de productos de las mejores marcas del mercado.
                 </p>
             </div>
             <div class="col-lg-9 m-auto tempaltemo-carousel">
@@ -150,7 +152,7 @@
                                     <div class="row">
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_01.png"
+                                                    src="<?php echo BASE_URL; ?>assets/img/tienda/5.png"
                                                     alt="Brand Logo"></a>
                                         </div>
                                         <div class="col-3 p-md-5">
@@ -191,7 +193,117 @@
     </div>
 </section>
 <!--End Brands-->
+<!-- Footer -->
+<footer class="bg-dark" id="tempaltemo_footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-success border-bottom pb-3 border-light logo">Tienda-virtual</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                        La María
+                    </li>
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <a class="text-decoration-none" href="tel:010-020-0340">3007200894</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <a class="text-decoration-none" href="mailto:info@company.com">Naikergomez0123@gmail.com</a>
+                    </li>
+                    <hr class="text-light border-bottom border-light ">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                        Arrollo de piedra
+                    </li>
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <a class="text-decoration-none" href="tel:010-020-0340">3007200894</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <a class="text-decoration-none" href="mailto:info@company.com">brayanmiguel@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Producto</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="#">Samsung</a></li>
+                    <li><a class="text-decoration-none" href="#">Apple</a></li>
+                    <li><a class="text-decoration-none" href="#">Motorola</a></li>
+                    <li><a class="text-decoration-none" href="#">Motorola</a></li>
+                    <li><a class="text-decoration-none" href="#">Oppo</a></li>
+                    <li><a class="text-decoration-none" href="#">Acer</a></li>
+                    <li><a class="text-decoration-none" href="#">Lenovo</a></li>
+                    <li><a class="text-decoration-none" href="#">Msi</a></li>
+                    <li><a class="text-decoration-none" href="#">Hp</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light">Acerca de nosotros</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="<?php echo BASE_URL .  'principal/nosotros' ?>">Nosotros</a></li>
+                    <li><a class="text-decoration-none" href="<?php echo BASE_URL .  'principal/shop' ?>">Tienda</a></li>
+                    <li><a class="text-decoration-none" href="<?php echo BASE_URL .  'principal/contact' ?>">Contacto</a></li>
+                    <li><a class="text-decoration-none" href="#">Productos para Distribuidores</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row text-light mb-4">
+            <div class="col-12 mb-3">
+                <div class="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div class="col-auto me-auto">
+                <ul class="list-inline text-left footer-icons">
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank"
+                            href="https://www.facebook.com/profile.php?id=61553377066342">
+                            <i class='bx bxl-facebook-circle'></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/naiker.codes/">
+                            <i class='bx bxl-instagram'></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/">
+                             <i class='bx bxl-twitter' ></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/in/naiker-gomez-a97449293/"><i
+                                class="bx bxl-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-auto">
+                <label class="sr-only" for="subscribeEmail"></label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
+                        placeholder="Enviar correo">
+                    <div class="input-group-text btn-success text-light">Subscribete</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-100 bg-black py-3">
+        <div class="container">
+            <div class="row pt-2">
+                <div class="col-12">
+                    <p class="text-left text-light text-center">
+                        Copyright &copy; 2024 Tienda virtual 
+                        © Developers and Design Vive P&M 2024
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 <?php include_once 'Views/template/footer_principal.php'; ?>
 
 </body>
