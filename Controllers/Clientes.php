@@ -178,7 +178,7 @@ class Clientes extends Controller
             $data[$i]['accion'] = '<div class="text-center"><button class="btn btn-primary" type="button" onclick="verPedido(' . $data[$i]['id'] . ')"><i class="fas fa-eye"></i></button></div>';
         }
         echo json_encode($data);
-        die();
+        die(); 
     }
     public function verPedido($idPedido)
     {

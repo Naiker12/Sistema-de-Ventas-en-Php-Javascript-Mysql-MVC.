@@ -2,15 +2,22 @@
 
 
 <!-- FORMULARIO DE CONTACTO -->
-
-<div class="container-fluid bg-light py-5">
-    <div class="col-md-6 m-auto text-center">
-        <h1 class="h1">Contáctanos</h1>
-        <p>
-          En Technology Store estamos siempre dispuestos a ayudarte. Si tienes alguna pregunta, comentario o sugerencia, no dudes en ponerte en contacto con nosotros.
-        </p>
+<section class="bg-success py-5">
+    <div class="container">
+        <div class="row align-items-center py-5">
+            <div class="col-md-8 ">
+                <h1 class="text-center">Contáctanos</h1>
+                <br>
+                <p class="h3 text-center">
+                  En Technology Store estamos siempre dispuestos a ayudarte. Si tienes alguna pregunta, comentario o sugerencia, no dudes en ponerte en contacto con nosotros.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img src="<?php echo BASE_URL; ?>assets/img/tienda/contactos.png" alt="About Hero">
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
 <!-- Start Contact -->
 <div class="container py-5">

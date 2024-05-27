@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>LOGIN DE ADMINITRACION</title>
+    <title>LOGIN DE ADMINISTRACIÓN</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo BASE_URL ;?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,16 +23,14 @@
 
 </head>
 
-<body class="bg-gradient-success"
-    style="background-image: url('https://img.freepik.com/premium-vector/futuristic-circuit-board-electronic-motherboard-communication-engineering-concept-hi-tech-digital-technology-concept_184920-6.jpg');">
-
+<body class="bg-gradient-primary" style="background-image: url('');">
+     
     <div class="container">
-
-        <nav class="navigation">
-            <a href="#">
-                <i class="fas fa-bars"></i> </a>
-        </nav>
-        <!-- Outer Row -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="card login-card">
             <div class="card-body">
 
@@ -47,7 +45,7 @@
                     <div class="col-lg-6">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Bienvenidos a mi tienda</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Zona de administracion</h1>
                             </div>
                             <form class="user g-3" id="formulario">
                                 <div class="form-group">
@@ -79,7 +77,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo BASE_URL ;?>assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo BASE_URL ;?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

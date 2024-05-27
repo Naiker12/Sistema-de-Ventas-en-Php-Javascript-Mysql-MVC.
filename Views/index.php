@@ -3,7 +3,7 @@
 <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 <!-- Start Banner Hero -->
-<div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+<div id="template-mo-zay-hero-carousel" class="carousel slide " data-bs-ride="carousel">
     <ol class="carousel-indicators">
         <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
         <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
@@ -12,7 +12,7 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="container">
-                <div class="row p-5">
+                <div  class="row p-5">
                     <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
                         <img class="img-fluid" src="assets/img/celular.png" alt="">
                     </div>
@@ -20,13 +20,15 @@
                         <div class="text-align-left align-self-center">
                             <h1 class="h1 text-success"><b> En Technology store
                                 </b></h1>
-                            <p>
+                            <p class="h3">
                                 nos apasiona la tecnología así como a ti somos un equipo de expertos
                                 que te ayudara a encontrar el dispositivo perfecto para tus necesidades y presupuestos.
                             </p>
-                            <p>
-                            <strong>¡Visita nuestra tienda o compra en línea y descubre por qué
-                            <strong class="text-success">Technology Store</strong> es la mejor opción la mejor plataforma en línea de venta</strong>
+                            <br>
+                            <p class="h3">
+                                <strong>¡Visita nuestra tienda o compra en línea y descubre por qué
+                                    <strong class="text-success">Technology Store</strong> es la mejor opción la mejor
+                                    plataforma en línea de venta</strong>
                             </p>
                         </div>
                     </div>
@@ -43,13 +45,16 @@
                         <div class="text-align-left">
                             <h1 class="h1"></h1>
                             <h3 class="h2"></h3>
-                            <p>
-                                En <strong>Technology store</strong> encontrarás la más amplia selección de celulares de
-                                las mejores marcas, como Iphone, Xiami, Samsung, y muchas más.
+                            <p class="h3">
+                                En <strong class="text-success">Technology store</strong> encontrarás la más amplia
+                                selección de tecnología tenemos de todas las marcas Samsung,!phone,lenovo y muchas
+                                marcas más.
                             </p>
-                            <p>
-                                Tenemos celulares para todos los presupuestos y necesidades, desde los últimos
-                                modelos de alta gama hasta opciones más económicas y funcionales.
+                            <br>
+                            <p class="h3">
+                                Tenemos celulares,computadores y Tables y muchas cosas más que se adatan a tu
+                                presupuesto y necesidades desde los últimos modelos de alta gama hasta opciones más
+                                económicas y funcionales
                             </p>
                         </div>
                     </div>
@@ -65,15 +70,17 @@
                     <div class="col-lg-6 mb-0 d-flex align-items-center">
                         <div class="text-align-left">
                             <h1 class="h1">¡Ofertas increíbles y la mejor atención!</h1>
-                            <p>
-                                En <strong>Technology store</strong>siempre encontrarás ofertas increíbles en celulares
-                                y
-                                accesorios.
+                            <p class="h3">
+                                En <strong class="text-success">Technology store</strong> siempre encontrarás los
+                                mejores
+                                Precios increíbles en celulares,computadores, tables, etc.
                             </p>
-                            <p>
-                                Además, nuestro equipo de expertos te brindará la mejor atención para que encuentres el
-                                dispositivo perfecto para ti.
+                            <br>
+                            <p class="h3">
+                                Además nuestra plataforma cuenta con las mejores reseñas y fotos de equipos que puede
+                                ver y se te gustan la puedes guardar para comprarla otro día
                             </p>
+                            <br>
                             <p>
                                 ¡No te pierdas nuestras ofertas y promociones especiales!
                             </p>
@@ -105,17 +112,47 @@
             </p>
         </div>
     </div>
-    <div class="row">
+    <div data-aos="zoom-out" class="row">
         <?php foreach ($data['categorias']  as $categoria) { ?>
         <div class="col-12 col-md-2 p-3 mt-3">
             <a href="<?php echo BASE_URL . 'principal/categorias/' . $categoria['id']; ?>"><img
                     src="<?php echo $categoria['imagen'];?>" class="rounded-circle img-fluid border"></a>
-            <h5 class="text-center mt-3 mb-3"> <?php  echo $categoria['categoria']; ?></h5>
+            <h5 class="text-center mt-3 mb-3 "> <?php  echo $categoria['categoria']; ?></h5>
         </div>
         <?php } ?>
     </div>
 </section>
 <!-- End Categories of The Month -->
+
+<section class="bg-success">
+    <div class="container py-5">
+        <div class="row text-center py-3">
+            <div class="row g-0 bg-body-tertiary position-relative ">
+                <div class="col-md-6 mb-md-0 p-md-4 ">
+                    <img  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" src="assets/img/tienda/ofertas.png" class="w-100" alt="hollywood sign" />
+                </div>
+                <div class="col-md-6 p-4 ps-md-0">
+                    <h3 class="mt-0">¿Buscas renovar tu equipo tecnológico sin gastar una fortuna?</h3>
+                    <p>
+                        ¡Entonces has llegado al lugar correcto! En nuestra tienda Technology store, tenemos una
+                        gran variedad de ofertas y descuentos que te ayudarán a ahorrar en grande.
+                    </p>
+                    <h5 class="mt-0">¡Ofertas destacadas:</h5>
+                    <p>
+                        <li>Smartphones: Hasta un 50% de descuento en modelos seleccionados de las mejores marcas.</li>
+                        <li>Computadoras: Laptops, desktops y tablets con precios increíbles.</li>
+                        <li>Televisores: Disfruta de la mejor calidad de imagen con descuentos de hasta un 40%.</li>
+                        <li>Electrodomésticos inteligentes: Controla tu hogar con lo último en tecnología a precios
+                            irresistibles.</li>
+                        <li>Accesorios: Encuentra una gran variedad de accesorios para tus dispositivos a precios
+                            increíbles.</li>
+                    </p>
+                    <a href="<?php echo BASE_URL .  'principal/shop' ?>" class="stretched-link">Productos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!-- Start Producto destacado -->
@@ -132,7 +169,7 @@
         <div class="row">
             <?php foreach ($data['nuevoProductos'] as $producto) { ?>
             <div class="col-12 col-md-4 mb-4">
-                <div class="card h-100">
+                <div data-aos="zoom-out-up" class="card h-100">
                     <a href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']; ?>">
                         <img src="<?php echo $producto['imagen']; ?>" class="card-img-top"
                             alt="<?php echo $producto['nombre']; ?>">
@@ -149,7 +186,7 @@
                             <li class="text-muted text-right"><?php echo MONEDA . ' ' . $producto['precio']; ?></li>
                         </ul>
                         <a href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']; ?>"
-                            class="h2 text-decoration-none text-dark"><?php echo $producto['nombre']; ?></a>
+                            class="h2 text-decoration-none text-dark text-success"><?php echo $producto['nombre']; ?></a>
                         <p class="card-text">
                             <?php echo  $producto['descripcion']; ?>
                         </p>
@@ -160,6 +197,37 @@
         </div>
     </div>
 </section>
+ <!-- Button Whatsapp Structure -->
+ <div class="whatsapp_chat_support wcs_fixed_right" id="button-w">
+    <div class="wcs_button_label">
+            Contáctanos
+        </div>  
+    <div class="wcs_button wcs_button_circle">
+        <span class="fa fa-whatsapp"></span>
+    </div>  
+ 
+    <div class="wcs_popup">
+        <div class="wcs_popup_close">
+            <span class="fa fa-close"></span>
+        </div>
+        <div class="wcs_popup_header">
+            <span class="fa fa-whatsapp"></span>
+            <strong>Servicio al cliente</strong>
+            
+            <div class="wcs_popup_header_description">¿Necesidad de ayuda? Chatea con nosotros en Whatsapp</div>
+
+        </div>  
+        <div class="wcs_popup_input" 
+            data-number="573007200894"
+            data-availability='{ "monday":"07:00-22:30", "tuesday":"07:00-22:30", "wednesday":"07:7030-22:30", "thursday":"07:00-22:30", "friday":"07:00-22:30", "saturday":"09:00-18:30", "sunday":"09:00-22:30" }'>
+            <input type="text" placeholder="Escribir pregunta!" />
+            <i class="fa fa-play"></i>
+        </div>
+        <div class="wcs_popup_avatar">
+            <img src="assets/img/tienda/3.jpeg" alt="">
+        </div>
+    </div>
+</div>
 <!-- Footer -->
 <footer class="bg-dark" id="tempaltemo_footer">
     <div class="container">

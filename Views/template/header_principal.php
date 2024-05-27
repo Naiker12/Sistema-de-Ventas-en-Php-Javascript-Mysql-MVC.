@@ -31,7 +31,15 @@
      <!-- LIBRERIA DE ALERTAS  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
+   <!-- LIBRERIA DE DE ICONOS  -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+   <!-- LIBRERIA DE ANIMACION EN LA CARD  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- BOTO DE WHATSAPP -->
+    <link rel="stylesheet" href="plugin/whatsapp-chat-support.css">
+    <link rel="stylesheet" href="plugin/components/Font Awesome/css/font-awesome.min.css">
 
 
     <!----------------------------------------------------

@@ -47,35 +47,35 @@
             <ul class="metismenu" id="menu">
                 <li>
                     <a href="<?php echo BASE_URL . 'admin/home'; ?>">
-                        <div class="parent-icon"><i class='fas fa-home'></i></i>
+                        <div class="parent-icon "><i class='fas fa-home'></i></i>
                         </div>
-                        <div class="menu-title text-primary">Administración</div>
+                        <div class="menu-title ">Administración</div>
                     </a>
                 </li>
                 <li>
                     <a href="<?php echo BASE_URL . 'usuarios'; ?>">
-                    <div class="parent-icon"><i class='fas fa-users'></i> 
+                    <div class="parent-icon "><i class='fas fa-users'></i> 
                         </div>
                         <div class="menu-title ">Usuarios</div>
                     </a>
                 </li>
                 <li>
                     <a href="<?php echo BASE_URL . 'categorias'; ?>">
-                    <div class="parent-icon"><i class='fas fa-tags'></i> 
+                    <div class="parent-icon "><i class='fas fa-tags'></i> 
                         </div>
-                        <div class="menu-title t">Categorias</div>
+                        <div class="menu-title ">Categorias</div>
                     </a>
                 </li>
                 <li>
                     <a href="<?php echo BASE_URL . 'productos'; ?>">
                     <div class="parent-icon"><i class='fas fa-list'></i> 
                         </div>
-                        <div class="menu-title t">Productos</div>
+                        <div class="menu-title">Productos</div>
                     </a>
                 </li>
                 <li>
                     <a href="<?php echo BASE_URL . 'pedidos'; ?>">
-                        <div class="parent-icon"><i class='fas fa-bell'></i>
+                        <div class="parent-icon "><i class='fas fa-bell'></i>
                         </div>
                         <div class="menu-title ">Pedidos</div>
                     </a>

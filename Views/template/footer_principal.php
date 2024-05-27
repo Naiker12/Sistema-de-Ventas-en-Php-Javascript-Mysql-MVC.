@@ -98,7 +98,6 @@
         </div>
     </div>
 </div>
-
 <!-- Start Script -->
 <script src="<?php echo BASE_URL; ?>assets/js/jquery-1.11.0.min.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -131,6 +130,21 @@ function alertaPerzanalizada(mensaje, type, titulo = '') {
       "hideMethod": "fadeOut"
     }
   }
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+</script>
+    <!-- jQuery 1.8+ -->
+<script src="plugin/components/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Plugin JS file -->
+<script src="plugin/components/moment/moment.min.js"></script>
+<script src="plugin/components/moment/moment-timezone-with-data.min.js"></script> <!-- spanish language (es) -->
+<script src="plugin/whatsapp-chat-support.js"></script>
+<script>
+   $('#button-w').whatsappChatSupport({
+        defaultMsg : '',
+    });
 </script>
 <script src="<?php echo BASE_URL; ?>assets/js/carrito.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/js/login.js"></script>

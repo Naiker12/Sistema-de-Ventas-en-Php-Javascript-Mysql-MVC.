@@ -280,6 +280,7 @@
             }
         ]
     });
+    
     $('#galeria-imagenes').slick({
         infinite: true,
         arrows: false,

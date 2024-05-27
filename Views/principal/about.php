@@ -4,17 +4,17 @@
 <section class="bg-success py-5">
     <div class="container">
         <div class="row align-items-center py-5">
-            <div class="col-md-8 text-white">
+            <div class="col-md-8 ">
                 <h1 class="text-center">¡Descubre nuestros servicios en Technology Store!</h1>
-                <hr>
-                <p>
+                <br>
+                <p class="h3 text-center">
                     En Technology Store no solo te ofrecemos una amplia gama de equipos tecnológicos de las mejores
                     marcas, sino que también ponemos a tu disposición una completa oferta de servicios para ayudarte a
                     sacar el máximo partido a tu tecnología.
                 </p>
             </div>
             <div class="col-md-4">
-                <img src="<?php echo BASE_URL; ?>assets/img/tienda/4.png" alt="About Hero">
+                <img src="<?php echo BASE_URL; ?>assets/img/tienda/3.jpeg" alt="About Hero">
             </div>
         </div>
     </div>
@@ -25,9 +25,9 @@
 <section class="container py-5">
     <div class="row text-center pt-5 pb-3">
         <div class="col-lg-6 m-auto">
-            <h1 class="h1">Servicio al cliente</h1>
-            <hr>
-            <p>
+            <h1 class="h1 ">Servicio al cliente</h1>
+             <br>
+            <p class=" h3 text-center">
                 En Technology Store creemos que la atención al cliente es fundamental para el éxito de cualquier
                 negocio. Por eso, nos esforzamos por ofrecer a nuestros clientes la mejor experiencia posible en cada
                 interacción.
@@ -36,28 +36,28 @@
     </div>
     <div class="row">
         <div class="col-md-6 col-lg-3 pb-5">
-            <div class="h-100 py-5 services-icon-wap shadow">
+            <div data-aos="fade-right" class="h-100 py-5 services-icon-wap shadow">
                 <div class="h1 text-success text-center"><i class="fa fa-truck fa-lg"></i></div>
                 <h2 class="h5 mt-4 text-center">Servicios de entrega</h2>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-3 pb-5">
-            <div class="h-100 py-5 services-icon-wap shadow">
+            <div data-aos="fade-up" class="h-100 py-5 services-icon-wap shadow">
                 <div class="h1 text-success text-center"><i class="fas fa-exchange-alt"></i></div>
                 <h2 class="h5 mt-4 text-center">Envíos y devoluciones</h2>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-3 pb-5">
-            <div class="h-100 py-5 services-icon-wap shadow">
+            <div data-aos="fade-up" class="h-100 py-5 services-icon-wap shadow">
                 <div class="h1 text-success text-center"><i class="fa fa-percent"></i></div>
                 <h2 class="h5 mt-4 text-center">Promociones</h2>
             </div>
         </div>
 
         <div class="col-md-6 col-lg-3 pb-5">
-            <div class="h-100 py-5 services-icon-wap shadow">
+            <div data-aos="fade-left" class="h-100 py-5 services-icon-wap shadow">
                 <div class="h1 text-success text-center"><i class="fa fa-user"></i></div>
                 <h2 class="h5 mt-4 text-center">Servicio 24 horas</h2>
             </div>
@@ -72,7 +72,7 @@
         <div class="row text-center py-3">
             <div class="col-lg-6 m-auto">
                 <h1 class="h1">Nuestras Marcas</h1>
-                <p>
+                <p class="h3 text-center">
                   En Technology Store nos enorgullece ofrecerte una amplia gama de productos de las mejores marcas del mercado.
                 </p>
             </div>
@@ -98,22 +98,22 @@
                                     <div class="row">
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_01.png"
+                                                    src="<?php echo BASE_URL; ?>assets/img/servicio/naiker1.png"
                                                     alt="Brand Logo"></a>
                                         </div>
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_02.png"
+                                                    src="<?php echo BASE_URL; ?>assets/img/servicio/naiker2.png"
                                                     alt="Brand Logo"></a>
                                         </div>
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_03.png"
+                                                    src="<?php echo BASE_URL; ?>assets/img/servicio/naiker3.png"
                                                     alt="Brand Logo"></a>
                                         </div>
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_04.png"
+                                                    src="<?php echo BASE_URL; ?>assets/img/servicio/naiker4.png"
                                                     alt="Brand Logo"></a>
                                         </div>
                                     </div>
@@ -122,58 +122,30 @@
 
                                 <!--Second slide-->
                                 <div class="carousel-item">
-                                    <div class="row">
+                                <div class="row">
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_01.png"
+                                                    src="<?php echo BASE_URL; ?>assets/img/servicio/naiker5.png"
                                                     alt="Brand Logo"></a>
                                         </div>
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_02.png"
+                                                    src="<?php echo BASE_URL; ?>assets/img/servicio/naiker6.png"
                                                     alt="Brand Logo"></a>
                                         </div>
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_03.png"
+                                                    src="<?php echo BASE_URL; ?>assets/img/servicio/naiker7.png"
                                                     alt="Brand Logo"></a>
                                         </div>
                                         <div class="col-3 p-md-5">
                                             <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_04.png"
+                                                    src="<?php echo BASE_URL; ?>assets/img/servicio/naiker8.png"
                                                     alt="Brand Logo"></a>
                                         </div>
                                     </div>
                                 </div>
                                 <!--End Second slide-->
-
-                                <!--Third slide-->
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/tienda/5.png"
-                                                    alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_02.png"
-                                                    alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_03.png"
-                                                    alt="Brand Logo"></a>
-                                        </div>
-                                        <div class="col-3 p-md-5">
-                                            <a href="#"><img class="img-fluid brand-img"
-                                                    src="<?php echo BASE_URL; ?>assets/img/brand_04.png"
-                                                    alt="Brand Logo"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--End Third slide-->
-
                             </div>
                             <!--End Slides-->
                         </div>

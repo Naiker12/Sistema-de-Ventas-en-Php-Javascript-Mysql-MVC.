@@ -64,9 +64,11 @@ body {
 </style>
 
 <div class="container">
-    <div class="main-body">
 
-        <div class="row gutters-sm">
+  
+
+    <div class="main-body">
+          <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body">
@@ -74,10 +76,10 @@ body {
                             <img src="assets/img/tienda/3.jpeg" alt="Admin" class="rounded-circle" width="150">
                             <div class="mt-3">
                                 <h4 class="">Naiker Gomez</h4>
-                                <p class="text-secondary mb-1">Backean Developer</p>
+                                <p class="text-secondary mb-1">Full Stack Developerr</p>
                                 <p class="text-muted font-size-sm">Cartagena</p>
-                                <button class="btn btn-primary">Seguidores</button>
-                                <button class="btn btn-outline-primary">Mensajes</button>
+                                <button class="btn btn-success">Seguidores</button>
+                                <button class="btn btn-outline-success">Mensajes</button>
                             </div>
                         </div>
                     </div>
@@ -95,7 +97,8 @@ body {
                                         d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
                                     </path>
                                 </svg>Sitio web</h6>
-                            <span class="text-secondary"><a href="https://github.com/Naiker12">https://github.com/Naiker12</a></span>
+                            <span class="text-secondary"><a
+                                    href="https://github.com/Naiker12">https://github.com/Naiker12</a></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -147,16 +150,16 @@ body {
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">nombre</h6>
+                                <h6 class="mb-0">Nombre</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                naiker gomez
+                                Naiker Gomez Caraballo
                             </div>
                         </div>
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">correo</h6>
+                                <h6 class="mb-0">Correo</h6>
                             </div>
                             <div class="col-sm-9 text-secondary ">
                                 naikergomez0123@gmail.com
@@ -183,7 +186,7 @@ body {
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Direcion</h6>
+                                <h6 class="mb-0">Direccion</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
                                 Bay Area, San Francisco, CA
@@ -192,7 +195,7 @@ body {
                         <hr>
                         <div class="row">
                             <div class="col-sm-12">
-                                <a class="btn btn-info " target="__blank"
+                                <a class="btn btn-success " target="__blank"
                                     href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Editar</a>
                             </div>
                         </div>
@@ -209,6 +212,7 @@ body {
                                 <div class="progress mb-3" style="height: 5px">
                                     <div class="progress-bar bg-primary" role="progressbar" style="width: 80%"
                                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+
                                 </div>
                                 <small>Marcado del sitio web</small>
                                 <div class="progress mb-3" style="height: 5px">
@@ -267,11 +271,12 @@ body {
                         </div>
                     </div>
                 </div>
+            </div>
+    <?php include_once 'Views/template/footer_admin.php'; ?>
 
+    <script>
+    
+    </script>
+    </body>
 
-                <?php include_once 'Views/template/footer_admin.php'; ?>
-
-
-                </body>
-
-                </html>
+    </html>

@@ -51,9 +51,9 @@ class Principal extends Controller
         $id_categoria = $data['producto']['id_categoria'];
         $data['relacionados'] = $this->model->getAleatorios($id_categoria, $data['producto']['id']);
 
-        //scanear galeria
+        //SCANNER DE GALERIA 
         $result = array();
-        $directorio = 'assets/images/productos/' . $id_producto;
+        $directorio = 'assets/img/productos/' . $id_producto;
         if (file_exists($directorio)) {
             $imagenes = scandir($directorio);
             if (false !== $imagenes) {
