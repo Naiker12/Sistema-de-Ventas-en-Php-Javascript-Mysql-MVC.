@@ -158,45 +158,50 @@
 <!-- Start Producto destacado -->
 <section class="bg-light">
     <div class="container py-5">
-        <div class="row text-center py-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1 "><strong class="text-success">Producto destacado</strong></h1>
-                <p>
-                    Libera tu potencial tecnológico con nuestros gadgets de vanguardia y precios imbatibles.
-                </p>
-            </div>
+      <div class="row text-center py-3">
+        <div class="col-lg-6 m-auto">
+          <h1 class="h1">Producto destacado</h1>
+          <p>
+           Libera tu potencial tecnológico con nuestros gadgets de vanguardia y precios imbatibles.
+          </p>
         </div>
-        <div class="row">
-            <?php foreach ($data['nuevoProductos'] as $producto) { ?>
-            <div class="col-12 col-md-4 mb-4">
-                <div data-aos="zoom-out-up" class="card h-100">
-                    <a href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']; ?>">
-                        <img src="<?php echo $producto['imagen']; ?>" class="card-img-top"
-                            alt="<?php echo $producto['nombre']; ?>">
-                    </a>
-                    <div class="card-body">
-                        <ul class="list-unstyled d-flex justify-content-between">
-                            <li>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-warning fa fa-star"></i>
-                                <i class="text-muted fa fa-star"></i>
-                                <i class="text-muted fa fa-star"></i>
-                            </li>
-                            <li class="text-muted text-right"><?php echo MONEDA . ' ' . $producto['precio']; ?></li>
-                        </ul>
-                        <a href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']; ?>"
-                            class="h2 text-decoration-none text-dark text-success"><?php echo $producto['nombre']; ?></a>
-                        <p class="card-text">
-                            <?php echo  $producto['descripcion']; ?>
-                        </p>
-                    </div>
-                </div>
+      </div>
+      <div class="row">
+        <?php foreach ($data['nuevoProductos'] as $producto) { ?>
+        <div class="col-12 col-md-4 mb-4">
+          <div data-aos="zoom-out-up" class="card h-100">
+            <a href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']; ?>">
+              <img src="<?php echo $producto['imagen']; ?>" class="card-img-top" alt="<?php echo $producto['nombre']; ?>">
+            </a>
+            <div class="card-body">
+              <ul class="list-unstyled d-flex justify-content-between">
+                <?php
+                $uno = ($producto['calificacion'] >= 1) ? 'text-warning' : 'text-muted';
+                $dos = ($producto['calificacion'] >= 2) ? 'text-warning' : 'text-muted';
+                $tres = ($producto['calificacion'] >= 3) ? 'text-warning' : 'text-muted';
+                $cuatro = ($producto['calificacion'] >= 4) ? 'text-warning' : 'text-muted';
+                $cinco = ($producto['calificacion'] == 5) ? 'text-warning' : 'text-muted';                
+                ?>
+                <li>
+                  <i class="<?php echo $uno; ?> fa fa-star"></i>
+                  <i class="<?php echo $dos; ?> fa fa-star"></i>
+                  <i class="<?php echo $tres; ?> fa fa-star"></i>
+                  <i class="<?php echo $cuatro; ?> fa fa-star"></i>
+                  <i class="<?php echo $cinco; ?> fa fa-star"></i>
+                </li>
+                <li class="text-muted text-right"><?php echo MONEDA . ' ' . $producto['precio']; ?></li>
+              </ul>
+              <a href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']; ?>" class="h2 text-decoration-none text-dark"><?php echo $producto['nombre']; ?></a>
+              <p class="card-text">
+              <?php echo $producto['descripcion']; ?>
+              </p>
             </div>
-            <?php } ?>
+          </div>
         </div>
+        <?php } ?>
+      </div>
     </div>
-</section>
+  </section>
  <!-- Button Whatsapp Structure -->
  <div class="whatsapp_chat_support wcs_fixed_right" id="button-w">
     <div class="wcs_button_label">

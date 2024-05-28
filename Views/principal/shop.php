@@ -1,5 +1,6 @@
 <?php include_once 'Views/template/header_principal.php'; ?>
 
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 <!-- Start Content -->
 <div class="container py-5">
